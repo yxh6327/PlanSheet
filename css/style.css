@@ -1,0 +1,138 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #CDCDCD;
+}
+#header{
+	width: 100%;
+	height: 50px;
+	background-color: #323232;
+}
+.container{
+	width: 600px;
+	margin: 0 auto;
+}
+.logo{
+	float: left;
+	color: #DDDDDD;
+	margin-top: 9px;
+}
+#header input{
+	float: right;
+	width: 350px;
+	height: 25px;
+	margin-top: 13px;
+	border-radius: 5px;
+	outline: none;
+	padding-left: 15px;
+	box-sizing: border-box;
+	border: none;
+	box-shadow: 
+	0 1px 0 rgba(255,255,255,0.24), 
+	0 1px 6px rgba(0,0,0,0.45) inset;
+}
+.todo, .down{
+	width: 100%;
+	overflow: hidden;
+}
+.todo h2, .down h2{
+	float: left;
+	margin-top: 25px;
+}
+span{
+	display: block;
+	float: right;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: #E6E6FA;
+	text-align: center;
+	line-height: 20px;
+	color: #666666;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 30px;
+}
+ul, ol{
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	overflow: hidden;
+}
+.todo li, .down li{
+	/*width: 100%;
+	height: 30px;
+	background-color: white;
+	margin-top: 10px;
+	border-radius: 5px;
+	overflow: hidden;*/
+	position: relative;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	margin-top: 10px;
+	border-radius: 5px;
+	word-break: break-all;
+}
+#content input{
+	float: left;
+	width: 20px;
+	height: 20px;
+    /*margin-top: 6px;*/
+    margin-left: 23px;
+}
+#content input::before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	content: "";
+	/*display: block;*/
+	width: 6px;
+	/*height: 33px;*/
+	background: #629A9C;
+/*	margin-top: -6px;*/
+	/*margin-left: -23px;*/
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#content p{
+	float: left;
+	/*height: 30px;*/
+	/*line-height: 30px;*/
+	width: 85%;
+	margin-left: 10px;
+	padding: 5px;
+}
+#content a{
+	position: absolute;
+	display: block;
+	/*top: 0;*/
+	right: 6px;
+	/*float: right;*/
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: #CCCCCC;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	line-height: 20px;
+	/*margin: 6px;*/
+}
+.down li {
+	opacity: 0.5;
+}
+#footer{
+	text-align: center;
+	margin-top: 20px;
+	font-size: 14px;
+	color: #666666;
+}
+#footer a{
+	color: #A699A0;
+	text-decoration: none;
+}
