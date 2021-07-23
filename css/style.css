@@ -123,6 +123,16 @@ ul, ol{
 	line-height: 20px;
 	/*margin: 6px;*/
 }
+#content .content-text{
+	margin-left: 0px;
+	width: 97%;
+	outline: none;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+
+
 .down li {
 	opacity: 0.5;
 }

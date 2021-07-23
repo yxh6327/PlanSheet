@@ -58,6 +58,44 @@ $(function() {
     });
 	
 
+    //双击修改
+    $("ul, ol").on('click', "p", function() {
+    	//拿到当前的p
+		var td = $(this);
+		//拿到文本
+		var txt = td.text();
+		//放入一个文本框
+		var input = $("<input type = 'text' class = 'content-text' value='" + txt + "'/>");
+		td.html(input);
+		//获取焦点
+		input.trigger("focus");
+		//文本框失去焦点后提交内容，将新内容提交到本地缓存
+		input.blur(function() {
+			var newtxt = $(this).val();			
+			replaceData(newtxt);
+		});
+		input.on("keydown", function(event) {
+            if(event.keyCode == 13) {
+            	var newtxt = $(this).val();			
+				replaceData(newtxt);
+            }
+		});
+
+		//替换新修改的文本
+		function replaceData(newtxt) {
+			//先获取本地存储
+			var data = getData();
+			//修改本地存储
+			var index = td.siblings("a").attr("id");
+			data[index].title = newtxt;
+			//重新存储数据
+			saveData(data);
+			//重新渲染页面
+			load();
+		}
+    });
+
+
 	//读取本地数据
 	function getData() {
 		var data = localStorage.getItem("todo");
